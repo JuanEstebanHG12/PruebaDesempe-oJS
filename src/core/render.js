@@ -1,9 +1,9 @@
 const app = document.getElementById('app')
 
-return function render(view) {
-    return `
-    ${Navbar()}
+export function render(view) {
+    return app.innerHTML = `
+    ${JSON.parse(sessionStorage.getItem('user')) ? "Navbar()": ""}
     ${view}
-    ${Footer()}
+    ${JSON.parse(sessionStorage.getItem('user')) ? "Footer()": ""}
     `
 }

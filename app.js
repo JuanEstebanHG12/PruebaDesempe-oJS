@@ -8,3 +8,4 @@ window.addEventListener('hashchange', router)
 // Agregamos un listener para el evento 'load' que se dispara cuando la página se carga inicialmente
 // Esto asegura que el enrutamiento se ejecute al cargar la aplicación
 window.addEventListener('load', router)
+
