@@ -4,7 +4,7 @@ import { Login, Register } from "../views/Global/index.js"
 import { CreateTask, DashboardUser } from "../views/User/index.js";
 
 
-export function router() {
+export async function router() {
 
     // Obtenemos el hash actual de la URL, por defecto '#/login'
     const hash = location.hash || '#/login'
@@ -80,6 +80,6 @@ export function router() {
     }
 
   // Renderizamos la vista correspondiente
-    render(routerConfig.view())
+    render(await routerConfig.view())
 }
 

@@ -1,5 +1,8 @@
-export function DashboardAdmin() {
+
+export async function DashboardAdmin() {
+
+
     return `
-    Dashboard
+        
     `
 }

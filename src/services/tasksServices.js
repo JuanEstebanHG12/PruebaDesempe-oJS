@@ -25,6 +25,19 @@ async function createTask(name,category ,status,priority,dueDate,desctiption) {
     }
 }
 
+async function getTasksById(userId) {
+    try {
+        const response = await fetch(`http://localhost:3000/tasks?assignee=${userId}`)
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.error(error);
+        
+    }
+
+}
+
 export{
-    createTask
+    createTask,
+    getTasksById
 }
