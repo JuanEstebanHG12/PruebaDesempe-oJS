@@ -7,10 +7,10 @@ export function DashboardUser() {
                         <p class="text-gray-500 mt-1 border border-yellow-400 inline-block px-1">Overview of your
                             current academic performance tasks.</p>
                     </div>
-                    <button
-                        class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700">
+                    <a
+                        href="#/create-tasks" class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700">
                         <span>+</span> New Task
-                    </button>
+                    </a>
                 </div>
 
                 <div class="grid grid-cols-4 gap-6 mb-8">

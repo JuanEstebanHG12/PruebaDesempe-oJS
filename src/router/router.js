@@ -1,7 +1,7 @@
 import { render } from "../core/render.js";
 import { DashboardAdmin } from "../views/Admin/index.js";
 import { Login, Register } from "../views/Global/index.js"
-import { DashboardUser } from "../views/User/index.js";
+import { CreateTask, DashboardUser } from "../views/User/index.js";
 
 
 export function router() {
@@ -44,6 +44,10 @@ export function router() {
         //User routes
         'manage-tasks': {
             view: DashboardUser,
+            role: "user"
+        },
+        'create-tasks': {
+            view: CreateTask,
             role: "user"
         },
         //Admin Routes
