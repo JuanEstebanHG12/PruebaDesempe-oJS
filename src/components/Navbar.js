@@ -12,10 +12,18 @@ export function Navbar() {
                         </div>
                         <img src="avatar.jpg" class="w-10 h-10 rounded-full bg-gray-200" alt="Avatar">
                     </div>
-                    <button class="text-red-500 ml-2">➡️</button>
+                    <button id="logout" class="text-red-500 ml-2">➡️</button>
                 </div>
             </header>
 
 `
-
 }
+
+document.addEventListener('click',(e) =>{
+    if (e.target.id === 'logout') {
+        sessionStorage.clear()
+        location.hash = '#/login'
+        console.log('logout');
+        
+    }
+})
