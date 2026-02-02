@@ -1,12 +1,10 @@
 import { render } from "../core/render.js";
 import { Dashboard } from "../views/Admin/Dasboard.js";
-import { Login } from "../views/Login.js"
+import { Login, Register } from "../views/Global/index.js"
 import { ManageTasks } from "../views/User/ManageTasks.js";
 
 
 export function router() {
-    console.log("router");
-    render('p')
 
     // Obtenemos el hash actual de la URL, por defecto '#/login'
     const hash = location.hash || '#/login'
@@ -20,7 +18,7 @@ export function router() {
 
 
     //Si no está logueado y la ruta no es login, redirecciona a login
-    if (!role && route !== 'login') {
+    if (!role && route !== 'login' && route !== 'register') {
         location.hash = '#/login'
         return
     }
@@ -34,14 +32,21 @@ export function router() {
 
     //Routes by roles
     const routes = {
+        //Global routes
         'login': {
             view: Login,
             role: null //Public access
-        },//User routes
+        },
+        'register': {
+            view: Register,
+            role: null //Public access
+        },
+        //User routes
         'manage-tasks': {
             view: ManageTasks,
             role: "user"
-        },//Admin Routes
+        },
+        //Admin Routes
         'dashboard': {
             view: Dashboard,
             role: "admin"
@@ -50,7 +55,6 @@ export function router() {
     }
 
     const routerConfig = routes[route]
-    console.log(routerConfig);
 
     //Si la ruta no existe, redirigir a la ruta por defecto según rol
     if (!routerConfig) {

@@ -1,11 +1,25 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name": "test Pruebas",
-            "email" : "test@gmail.com",
-            "password": 123,
-            "role" : "user"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "test Pruebas",
+      "email": "test@gmail.com",
+      "password": 123,
+      "role": "user"
+    },
+    {
+      "id": "c7f9",
+      "name": "Juan",
+      "email": "juan@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "3e0a",
+      "name": "Juan Esteban",
+      "email": "juanEsteban@gmail.com",
+      "password": "123",
+      "role": "user"
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-import { login } from "../services/userServices.js";
+import { login } from "../../services/userServices.js";
 
 export function Login(){
     return `
@@ -64,7 +64,7 @@ export function Login(){
 
     <div class="mt-6 text-center text-sm text-gray-600">
       <span>Don't have an account?</span>
-      <a href="#" class="text-blue-600 hover:underline font-medium ml-1">
+      <a href="#/register" class="text-blue-600 hover:underline font-medium ml-1">
         Register
       </a>
     </div>
@@ -80,6 +80,6 @@ document.addEventListener('submit',async (e)=> {
         const form = e.target
         const email = form.querySelector('#identifier')
         const password = form.querySelector('#password')
-        console.log(await login(email.value, password.value));
+        await login(email.value, password.value);
     }
 })
