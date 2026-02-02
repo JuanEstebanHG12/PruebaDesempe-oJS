@@ -1,4 +1,5 @@
 import { TaskCard } from "./TaskCard.js";
+import { UpdateTask } from "./UpdateTask.js";
 
 export function ListTask(tasks) {
     return `
@@ -32,5 +33,7 @@ export function ListTask(tasks) {
                         ${tasks.map(task => TaskCard(task)).join('')}
                         </tbody>
                     </table>
-                </div>`
+
+                </div>
+                ${UpdateTask()}`
 }

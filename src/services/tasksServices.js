@@ -47,6 +47,32 @@ async function getTasks() {
     }
 
 }
+async function getTaskInfoById(id) {
+    try {
+        const response = await fetch(`http://localhost:3000/tasks/${id}`)
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.error(error);
+        
+    }
+
+}
+
+async function updateTaskService(taskId,task) {
+    try {
+        await fetch(`http://localhost:3000/tasks/${taskId}`,{
+            method: 'PATCH',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(task)
+        })
+    } catch (error) {
+        
+    }
+}
+
 async function deleteTask(taskId) {
     try {
         fetch(`http://localhost:3000/tasks/${taskId}`,{
@@ -64,5 +90,7 @@ export{
     createTask,
     getTasksById,
     deleteTask,
-    getTasks
+    getTasks,
+    getTaskInfoById,
+    updateTaskService
 }
