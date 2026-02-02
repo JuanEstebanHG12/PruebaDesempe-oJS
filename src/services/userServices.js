@@ -21,7 +21,9 @@ async function login(email, password) {
         const users = await getUsers()
         const userFinded = users.find(user => user.email == email && user.password == password)
         if (userFinded) {
-            sessionStorage.setItem('user', JSON.stringify(userFinded))
+            const userCopy = {...userFinded}
+            delete userCopy.password
+            sessionStorage.setItem('user', JSON.stringify(userCopy))
             location.hash = "#/manage-tasks"
             return true
         }
