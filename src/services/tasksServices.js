@@ -36,8 +36,21 @@ async function getTasksById(userId) {
     }
 
 }
+async function deleteTask(taskId) {
+    try {
+        fetch(`http://localhost:3000/tasks/${taskId}`,{
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            },
+        })
+    } catch (error) {
+        
+    }
+}
 
 export{
     createTask,
-    getTasksById
+    getTasksById,
+    deleteTask
 }

@@ -24,26 +24,6 @@
   ],
   "tasks": [
     {
-      "id": "3da1",
-      "name": "task test",
-      "category": "react",
-      "status": "pending",
-      "priority": "medium",
-      "dueDate": "2026-12-31",
-      "desctiption": "test task",
-      "assignee": "c7f9"
-    },
-    {
-      "id": "23ba",
-      "name": "task test",
-      "category": "react",
-      "status": "inProgress",
-      "priority": "low",
-      "dueDate": "2027-01-02",
-      "desctiption": "test 2",
-      "assignee": "c7f9"
-    },
-    {
       "id": "a5ae",
       "name": "task test high",
       "category": "js",
@@ -51,16 +31,6 @@
       "priority": "high",
       "dueDate": "2026-01-01",
       "desctiption": "test high\n",
-      "assignee": "c7f9"
-    },
-    {
-      "id": "5a30",
-      "name": "task test 3",
-      "category": "js",
-      "status": "completed",
-      "priority": "medium",
-      "dueDate": "2026-12-31",
-      "desctiption": "t",
       "assignee": "c7f9"
     }
   ]

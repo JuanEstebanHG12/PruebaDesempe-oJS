@@ -1,0 +1,12 @@
+.pending{
+    background-color: rgba(255, 166, 0, 0.441);
+    color: orangered;
+}
+.inProgress{
+    background-color: skyblue;
+    color: blue;
+}
+.completed{
+    background-color: lightgreen;
+    color: green;
+}

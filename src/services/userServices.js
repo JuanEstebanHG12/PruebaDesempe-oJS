@@ -17,6 +17,7 @@ async function getUsers() {
     }
 }
 
+
 async function login(email, password) {
     try {
         const users = await getUsers()
@@ -55,6 +56,8 @@ async function validateUserExist(email) {
     const userExist = users.find(user => user.email == email)
     return userExist ? true : false
 }
+
+
 
 export {
     login,
