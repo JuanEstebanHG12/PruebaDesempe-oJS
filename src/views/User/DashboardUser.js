@@ -1,3 +1,4 @@
+import { HeaderDashboard } from "../../components/HeaderDashboard.js"
 import { ListTask } from "../../components/User/ListTask.js"
 import { getTasksById } from "../../services/tasksServices.js"
 
@@ -24,17 +25,7 @@ export async function DashboardUser() {
 
     return `
 <div class="p-8">
-                <div class="flex justify-between items-start mb-8">
-                    <div>
-                        <h2 class="text-3xl font-bold text-gray-800">Task Manager</h2>
-                        <p class="text-gray-500 mt-1 border border-yellow-400 inline-block px-1">Overview of your
-                            current academic performance tasks.</p>
-                    </div>
-                    <a
-                        href="#/create-tasks" class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700">
-                        <span>+</span> New Task
-                    </a>
-                </div>
+               ${HeaderDashboard()}
 
                 <div class="grid grid-cols-4 gap-6 mb-8">
                     <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">

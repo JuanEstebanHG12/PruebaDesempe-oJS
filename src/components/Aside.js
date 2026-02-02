@@ -9,10 +9,10 @@ export function Aside(){
             </div>
 
             <nav class="flex-1 px-4 space-y-2">
-                <a href="#" class="flex items-center gap-3 p-3 bg-blue-50 text-blue-600 rounded-lg font-medium">
+                <a href="#/manage-tasks" class="flex items-center gap-3 p-3 bg-blue-50 text-blue-600 rounded-lg font-medium">
                     <span class="icon">📁</span> Dashboard
                 </a>
-                <a href="#" class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-100 rounded-lg">
+                <a href="#/my-tasks" class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-100 rounded-lg">
                     <span class="icon">📋</span> My Tasks
                 </a>
                 <a href="#" class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-100 rounded-lg">

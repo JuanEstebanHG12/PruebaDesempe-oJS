@@ -36,6 +36,17 @@ async function getTasksById(userId) {
     }
 
 }
+async function getTasks() {
+    try {
+        const response = await fetch(`http://localhost:3000/tasks`)
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.error(error);
+        
+    }
+
+}
 async function deleteTask(taskId) {
     try {
         fetch(`http://localhost:3000/tasks/${taskId}`,{
@@ -52,5 +63,6 @@ async function deleteTask(taskId) {
 export{
     createTask,
     getTasksById,
-    deleteTask
+    deleteTask,
+    getTasks
 }

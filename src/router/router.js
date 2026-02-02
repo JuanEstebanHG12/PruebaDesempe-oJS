@@ -1,7 +1,7 @@
 import { render } from "../core/render.js";
-import { DashboardAdmin } from "../views/Admin/index.js";
 import { Login, Register } from "../views/Global/index.js"
-import { CreateTask, DashboardUser } from "../views/User/index.js";
+import { DashboardAdmin } from "../views/Admin/index.js";
+import { CreateTask, DashboardUser, MyTasks } from "../views/User/index.js";
 
 
 export async function router() {
@@ -48,6 +48,10 @@ export async function router() {
         },
         'create-tasks': {
             view: CreateTask,
+            role: "user"
+        },
+        'my-tasks': {
+            view: MyTasks,
             role: "user"
         },
         //Admin Routes
